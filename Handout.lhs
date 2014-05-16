@@ -163,7 +163,7 @@ Similarly, thrice f is equivalent to comp f (comp f f ) as well as comp (comp f 
 
 6. Self application. Here is a lambda-term that appears strange from a traditional mathematical point of view: sa = λx. x x
 
-> let self'' = \x -> x x
+> -- let self'' = \x -> x x
 
 This function takes an argument x, which is apparently a function. It applies the function to itself and returns whatever is the result.
 
@@ -252,4 +252,4 @@ m′ = λself.λy....the body of m ...
 The object x has a collection of such functions encoding the methods. The method call x.m(y) is then translated as x.m′(x)(y). This is a form of self application. The function m′, which is a part of the structure x, is applied to the structure x itself. The meaning of such self application is explained in the article “Two semantic models of object-oriented languages” by S. Kamin and U. S. Reddy in the volume Theoretical Aspects of Object-Oriented Programming, MIT Press, 1994.
 
 
--->  return ()
+> (^^) ("Done", 0)
